@@ -311,7 +311,7 @@
           const position = await getPosition();
           const { latitude, longitude } = position.coords;
           const { data } = await axios.get(
-            `http://api.openweathermap.org/data/2.5/${type}?lat=${latitude}&lon=${longitude}&appid=2719e331e07a6af0547cfe7df2754c8c`
+            `https://api.openweathermap.org/data/2.5/${type}?lat=${latitude}&lon=${longitude}&appid=2719e331e07a6af0547cfe7df2754c8c`
           );
           // setMap(latitude, longitude);
           if (type === "weather") {
@@ -328,7 +328,7 @@
         
         } catch (err) {
           const { data } = await axios.get(
-            `http://api.openweathermap.org/data/2.5/${type}?q=Seoul&appid=2719e331e07a6af0547cfe7df2754c8c`
+            `https://api.openweathermap.org/data/2.5/${type}?q=Seoul&appid=2719e331e07a6af0547cfe7df2754c8c`
           );
           if (type === "weather") {
             dayWeatherComponent.innerHTML = dayComponent(data);
